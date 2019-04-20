@@ -1,0 +1,11 @@
+/Volumes/DATA/Projects/Sample-Design-Pattern/bin/Debug/netcoreapp2.1/Sample-Design-Pattern.deps.json
+/Volumes/DATA/Projects/Sample-Design-Pattern/bin/Debug/netcoreapp2.1/Sample-Design-Pattern.runtimeconfig.json
+/Volumes/DATA/Projects/Sample-Design-Pattern/bin/Debug/netcoreapp2.1/Sample-Design-Pattern.runtimeconfig.dev.json
+/Volumes/DATA/Projects/Sample-Design-Pattern/bin/Debug/netcoreapp2.1/Sample-Design-Pattern.dll
+/Volumes/DATA/Projects/Sample-Design-Pattern/bin/Debug/netcoreapp2.1/Sample-Design-Pattern.pdb
+/Volumes/DATA/Projects/Sample-Design-Pattern/obj/Debug/netcoreapp2.1/Sample-Design-Pattern.csprojAssemblyReference.cache
+/Volumes/DATA/Projects/Sample-Design-Pattern/obj/Debug/netcoreapp2.1/Sample-Design-Pattern.csproj.CoreCompileInputs.cache
+/Volumes/DATA/Projects/Sample-Design-Pattern/obj/Debug/netcoreapp2.1/Sample-Design-Pattern.AssemblyInfoInputs.cache
+/Volumes/DATA/Projects/Sample-Design-Pattern/obj/Debug/netcoreapp2.1/Sample-Design-Pattern.AssemblyInfo.cs
+/Volumes/DATA/Projects/Sample-Design-Pattern/obj/Debug/netcoreapp2.1/Sample-Design-Pattern.dll
+/Volumes/DATA/Projects/Sample-Design-Pattern/obj/Debug/netcoreapp2.1/Sample-Design-Pattern.pdb
