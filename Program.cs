@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Sample_Design_Pattern.AbstractFactoryPattern;
 using Sample_Design_Pattern.FactoryMethodPattern;
 using Sample_Design_Pattern.SingletonPattern;
+using System.Linq;
+using Sample_Design_Pattern.FacadePattern;
 
 namespace Sample_Design_Pattern
 {
@@ -9,36 +12,19 @@ namespace Sample_Design_Pattern
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Design Patterns");
             string desinPatternName = Console.ReadLine();
             switch(desinPatternName.ToLower()){
 
+                //CREATETIONAL PATTERN
+                //Singleton pattern, Factory method pattern, Abstract factory pattern
                 case "singleton":
                 //Singleton pattern
                     Console.WriteLine("*** Singleton pattern ***");
                     SingletonFullLazyInstanitation.Instance.ShowInstance();
                     Console.WriteLine("*** End Singleton pattern ***");
                     break;
-
-                case "adapter":
-                 //Adapter pattern
-                    Console.WriteLine("*** Adapter pattern ***");
-                    string pageName = "Offer Page";
-                    ITarget pageAdapter = new PageAdapter();
-
-                    //show all page
-                    var pages = pageAdapter.GetPages();
-                    foreach(var page in pages){
-                        Console.WriteLine(page);
-                    }
-                    //check pageName exist or not
-                    if(pageAdapter.IsPageExist(pageName))
-                        Console.WriteLine($"page {pageName} exist");
-                    else
-                        Console.WriteLine($"page {pageName} not exist");
-
-                    Console.WriteLine("*** End Adapter pattern ***");
-                break;
 
                 case "factory method":
                     //Factory pattern
@@ -77,6 +63,39 @@ namespace Sample_Design_Pattern
                     Console.WriteLine("*** End Abstract Factory pattern ***");
                     break;
 
+                //STRUCTOR PATTERN
+                //Adapter pattern, Facade pattern
+                case "adapter":
+                 //Adapter pattern
+                    Console.WriteLine("*** Adapter pattern ***");
+                    string pageName = "Offer Page";
+                    ITarget pageAdapter = new PageAdapter();
+
+                    //show all page
+                    var pages = pageAdapter.GetPages();
+                    foreach(var page in pages){
+                        Console.WriteLine(page);
+                    }
+                    //check pageName exist or not
+                    if(pageAdapter.IsPageExist(pageName))
+                        Console.WriteLine($"page {pageName} exist");
+                    else
+                        Console.WriteLine($"page {pageName} not exist");
+
+                    Console.WriteLine("*** End Adapter pattern ***");
+                break;
+                
+                case "facade":
+                    Console.WriteLine("*** Facade pattern ***");
+                    BookingFacade bookingFacede = new BookingFacade();
+                    Customer customer = new Customer(1, "Alice");
+                    bool isCanbook = bookingFacede.IsCanBook(customer, "Alexa", "12:00:00");
+                    string message = isCanbook == true?$"{customer.Name} can book":$"{customer.Name} can't book";
+                    Console.WriteLine(message);
+                    Console.WriteLine("*** End Facade pattern ***");
+                    break;
+
+                
                 default:
                 Console.WriteLine("not match any pattern");
                 break;
