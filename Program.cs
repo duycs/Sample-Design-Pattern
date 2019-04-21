@@ -1,4 +1,5 @@
 ﻿using System;
+using Sample_Design_Pattern.AbstractFactoryPattern;
 using Sample_Design_Pattern.FactoryMethodPattern;
 using Sample_Design_Pattern.SingletonPattern;
 
@@ -62,7 +63,19 @@ namespace Sample_Design_Pattern
                     var productDetails = factory.GetProductDetails();
                     Console.WriteLine($"id: {productDetails.Id}\n name: {productDetails.Name}\n category: {productDetails.Category}\n quantity: {productDetails.Quantity}");
                     Console.WriteLine("*** End Factory pattern ***");
-                break;
+                    break;
+
+                case "abstract factory":
+                    Console.WriteLine("*** Abstract Factory pattern ***");
+                    ContinentFactory africa = new AfricaFactory();
+                    var animalWorld = new AnimalWorld(africa);
+                    animalWorld.RunFoodChain();
+
+                    ContinentFactory america = new AmericaFactory();
+                    animalWorld = new AnimalWorld(america);
+                    animalWorld.RunFoodChain();
+                    Console.WriteLine("*** End Abstract Factory pattern ***");
+                    break;
 
                 default:
                 Console.WriteLine("not match any pattern");
