@@ -5,6 +5,7 @@ using Sample_Design_Pattern.FactoryMethodPattern;
 using Sample_Design_Pattern.SingletonPattern;
 using System.Linq;
 using Sample_Design_Pattern.FacadePattern;
+using Sample_Design_Pattern.ObserverPattern;
 
 namespace Sample_Design_Pattern
 {
@@ -95,7 +96,24 @@ namespace Sample_Design_Pattern
                     Console.WriteLine("*** End Facade pattern ***");
                     break;
 
-                
+                //BEHAVIORAL PATTERN
+                //Observer pattern
+                case "observer":
+                Console.WriteLine("*** Observer pattern ***");
+                ConcreteSubject subject = new ConcreteSubject();
+                subject.Attach(new ConcreteObserver(subject, "subjectA"));
+                subject.Attach(new ConcreteObserver(subject, "subjectB"));
+                subject.Attach(new ConcreteObserver(subject, "subjectC"));
+
+                subject.SubjectStatate = "new state";
+                subject.Notify();
+
+                Console.WriteLine("after deattach an object");
+                subject.Deattach(new ConcreteObserver(subject, "subjectA"));
+                subject.Notify();
+
+                Console.WriteLine("*** End Observer pattern ***");
+                break;
                 default:
                 Console.WriteLine("not match any pattern");
                 break;
