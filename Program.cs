@@ -6,6 +6,7 @@ using Sample_Design_Pattern.SingletonPattern;
 using System.Linq;
 using Sample_Design_Pattern.FacadePattern;
 using Sample_Design_Pattern.ObserverPattern;
+using Sample_Design_Pattern.ObserverPattern.BookingObserverPattern;
 
 namespace Sample_Design_Pattern
 {
@@ -89,7 +90,7 @@ namespace Sample_Design_Pattern
                 case "facade":
                     Console.WriteLine("*** Facade pattern ***");
                     BookingFacade bookingFacede = new BookingFacade();
-                    Customer customer = new Customer(1, "Alice");
+                    FacadePattern.Customer customer = new FacadePattern.Customer(1, "Alice");
                     bool isCanbook = bookingFacede.IsCanBook(customer, "Alexa", "12:00:00");
                     string message = isCanbook == true?$"{customer.Name} can book":$"{customer.Name} can't book";
                     Console.WriteLine(message);
@@ -100,20 +101,27 @@ namespace Sample_Design_Pattern
                 //Observer pattern
                 case "observer":
                 Console.WriteLine("*** Observer pattern ***");
-                ConcreteSubject subject = new ConcreteSubject();
-                subject.Attach(new ConcreteObserver(subject, "subjectA"));
-                subject.Attach(new ConcreteObserver(subject, "subjectB"));
-                subject.Attach(new ConcreteObserver(subject, "subjectC"));
+                    // ConcreteSubject subject = new ConcreteSubject();
+                    // subject.Attach(new ConcreteObserver(subject, "subjectA"));
+                    // subject.Attach(new ConcreteObserver(subject, "subjectB"));
+                    // subject.Attach(new ConcreteObserver(subject, "subjectC"));
 
-                subject.SubjectStatate = "new state";
-                subject.Notify();
+                    // subject.SubjectStatate = "new state";
+                    // subject.Notify();
 
-                Console.WriteLine("after deattach an object");
-                subject.Deattach(new ConcreteObserver(subject, "subjectA"));
-                subject.Notify();
+                    string time10 = "10:00:00";
+                    Booking bookingAt10 = new Booking(time10);
+                    bookingAt10.Attach(new ObserverPattern.BookingObserverPattern.Customer(bookingAt10));
+                    bookingAt10.Attach(new ObserverPattern.BookingObserverPattern.Customer(bookingAt10));
 
-                Console.WriteLine("*** End Observer pattern ***");
-                break;
+                    string time11 = "11:00:00";
+                    Booking bookingAt11 = new Booking(time11);
+                    bookingAt11.Attach(new ObserverPattern.BookingObserverPattern.Customer(bookingAt11));
+                    bookingAt11.Attach(new ObserverPattern.BookingObserverPattern.Customer(bookingAt11));
+                    bookingAt11.Attach(new ObserverPattern.BookingObserverPattern.Customer(bookingAt11));
+
+                    Console.WriteLine("*** End Observer pattern ***");
+                    break;
                 default:
                 Console.WriteLine("not match any pattern");
                 break;

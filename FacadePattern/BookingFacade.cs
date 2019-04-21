@@ -1,7 +1,7 @@
 using System;
 namespace Sample_Design_Pattern.FacadePattern{
 
-    //facade use many subsytem
+    //facade use many subsystem
     public class BookingFacade{
         private EmployeeAvailable _employeeAvailable = new EmployeeAvailable();
         private TimeBookingAvailable _timeBookingAvailable = new TimeBookingAvailable();
