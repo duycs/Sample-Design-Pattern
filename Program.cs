@@ -1,5 +1,6 @@
 ﻿using System;
 using Sample_Design_Pattern.FactoryMethodPattern;
+using Sample_Design_Pattern.SingletonPattern;
 
 namespace Sample_Design_Pattern
 {
@@ -9,7 +10,15 @@ namespace Sample_Design_Pattern
         {
             Console.WriteLine("Design Patterns");
             string desinPatternName = Console.ReadLine();
-            switch(desinPatternName){
+            switch(desinPatternName.ToLower()){
+
+                case "singleton":
+                //Singleton pattern
+                    Console.WriteLine("*** Singleton pattern ***");
+                    SingletonFullLazyInstanitation.Instance.ShowInstance();
+                    Console.WriteLine("*** End Singleton pattern ***");
+                    break;
+
                 case "adapter":
                  //Adapter pattern
                     Console.WriteLine("*** Adapter pattern ***");
