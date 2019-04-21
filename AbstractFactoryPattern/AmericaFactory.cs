@@ -1,6 +1,5 @@
 namespace Sample_Design_Pattern.AbstractFactoryPattern{
 class AmericaFactory : ContinentFactory
-
   {
     public override Herbivore CreateHerbivore()
     {
