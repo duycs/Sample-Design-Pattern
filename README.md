@@ -7,7 +7,7 @@
 
 ### Adapter
 
-### Facede
+### Facade
 
 ### Factory Method
 
