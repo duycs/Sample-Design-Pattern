@@ -7,9 +7,17 @@ using System.Linq;
 using Sample_Design_Pattern.FacadePattern;
 using Sample_Design_Pattern.ObserverPattern;
 using Sample_Design_Pattern.ObserverPattern.BookingObserverPattern;
+using System.Reflection;
+using reflection;
 
 namespace Sample_Design_Pattern
 {
+
+    public class DesignPattern {
+        public string SINGLETON = "singleton";
+        public string FACTORY_METHOD = "factory method";
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -122,6 +130,33 @@ namespace Sample_Design_Pattern
 
                     Console.WriteLine("*** End Observer pattern ***");
                     break;
+
+                case "reflection":
+                    Console.WriteLine("***Reflection***");
+
+                    Console.WriteLine("1. Assembly reflection:");
+                    Assembly ass = Assembly.GetExecutingAssembly();
+                    Type[] mTypes = ass.GetTypes();
+                    Array.ForEach(mTypes, type => Console.WriteLine(type.Name));
+                    //---
+                    Console.WriteLine("2. Type Reflection:");
+                    Type myClassType = new MyClass().GetType();
+                    MemberInfo[] members = myClassType.GetMembers();
+                    Array.ForEach(members, member => {
+                        Console.WriteLine(string.Format("{0}:{1}", member.MemberType.ToString(), member));
+                    });
+                    //---
+                    Console.WriteLine("3. Activator reflection:");
+                    // TODO: Constructor on type 'reflection.MyClass+InnerClass' not found
+                    Type innerClassType = Type.GetType("reflection.MyClass+InnerClass");
+                    object obj1 = Activator.CreateInstance(innerClassType);
+                    object obj2 = Activator.CreateInstance(innerClassType, "Duy");
+                    innerClassType.InvokeMember("Hello", BindingFlags.InvokeMethod, null, obj1, null);
+                    innerClassType.InvokeMember("Hello", BindingFlags.InvokeMethod, null, obj2, null);
+
+                    Console.WriteLine("***End Reflection***");
+                    break;
+
                 default:
                 Console.WriteLine("not match any pattern");
                 break;
