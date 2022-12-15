@@ -5,6 +5,8 @@
 
 ### AbstractionFactory
 
+### Builder
+
 ### Adapter
 
 ### Facade
