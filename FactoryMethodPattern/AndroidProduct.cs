@@ -1,4 +1,4 @@
-namespace Sample_Design_Pattern.FactoryMethodPattern
+namespace SampleDesignPattern.FactoryMethodPattern
 {
     public class AndroidProduct : Product
     {

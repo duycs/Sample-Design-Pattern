@@ -1,5 +1,5 @@
 using System;
-namespace Sample_Design_Pattern.FacadePattern{
+namespace SampleDesignPattern.FacadePattern{
 
     //facade use many subsystem
     public class BookingFacade{

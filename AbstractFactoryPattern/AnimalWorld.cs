@@ -1,4 +1,4 @@
-namespace Sample_Design_Pattern.AbstractFactoryPattern{
+namespace SampleDesignPattern.AbstractFactoryPattern{
 
  class AnimalWorld{
         private Herbivore herbivore;

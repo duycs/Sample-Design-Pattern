@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace sample_design_pattern.BuilderPattern
+namespace SampleDesignPattern.BuilderPattern
 {
     public class PostSetting
     {

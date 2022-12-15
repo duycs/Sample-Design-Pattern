@@ -1,4 +1,4 @@
-namespace Sample_Design_Pattern.AbstractFactoryPattern{
+namespace SampleDesignPattern.AbstractFactoryPattern{
 class AfricaFactory : ContinentFactory
   {
     public override Herbivore CreateHerbivore()

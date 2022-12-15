@@ -1,6 +1,6 @@
 using System;
 
-namespace Sample_Design_Pattern.SingletonPattern
+namespace SampleDesignPattern.SingletonPattern
 {
     public sealed class SingletonFullLazyInstanitation
     {

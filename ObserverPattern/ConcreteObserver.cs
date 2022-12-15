@@ -1,6 +1,6 @@
 using System;
 
-namespace Sample_Design_Pattern.ObserverPattern
+namespace SampleDesignPattern.ObserverPattern
 {
     class ConcreteObserver : Observer
     {

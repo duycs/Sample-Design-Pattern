@@ -1,4 +1,4 @@
-namespace Sample_Design_Pattern.ObserverPattern{
+namespace SampleDesignPattern.ObserverPattern{
     abstract class Observer{
         public abstract void Update();
     }

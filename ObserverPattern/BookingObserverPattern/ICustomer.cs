@@ -1,4 +1,4 @@
-namespace Sample_Design_Pattern.ObserverPattern.BookingObserverPattern
+namespace SampleDesignPattern.ObserverPattern.BookingObserverPattern
 {
     //observer interface
     public interface ICustomer

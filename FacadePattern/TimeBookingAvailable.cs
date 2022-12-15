@@ -1,6 +1,6 @@
 using System;
 
-namespace Sample_Design_Pattern.FacadePattern
+namespace SampleDesignPattern.FacadePattern
 {
     //a sub system
     public class TimeBookingAvailable

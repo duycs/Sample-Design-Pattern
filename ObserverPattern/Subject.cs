@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace Sample_Design_Pattern.ObserverPattern
+namespace SampleDesignPattern.ObserverPattern
 {
     abstract class Subject
     {

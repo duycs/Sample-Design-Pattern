@@ -1,4 +1,4 @@
-namespace Sample_Design_Pattern.FacadePattern{
+namespace SampleDesignPattern.FacadePattern{
     public class Customer{
         public int Id{get;set;}
         public string Name{get;set;}

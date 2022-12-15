@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace sample_design_pattern.BuilderPattern
+namespace SampleDesignPattern.BuilderPattern
 {
     public class PostBuilder : IPostBuilder
     {

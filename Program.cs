@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using Sample_Design_Pattern.AbstractFactoryPattern;
-using Sample_Design_Pattern.FactoryMethodPattern;
-using Sample_Design_Pattern.SingletonPattern;
+using SampleDesignPattern.AbstractFactoryPattern;
+using SampleDesignPattern.FactoryMethodPattern;
+using SampleDesignPattern.SingletonPattern;
 using System.Linq;
-using Sample_Design_Pattern.FacadePattern;
-using Sample_Design_Pattern.ObserverPattern;
-using Sample_Design_Pattern.ObserverPattern.BookingObserverPattern;
+using SampleDesignPattern.FacadePattern;
+using SampleDesignPattern.ObserverPattern;
+using SampleDesignPattern.ObserverPattern.BookingObserverPattern;
 using System.Reflection;
 using reflection;
 
-namespace Sample_Design_Pattern
+namespace SampleDesignPattern
 {
 
     public class DesignPattern {

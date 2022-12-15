@@ -1,6 +1,6 @@
 using System;
 
-namespace Sample_Design_Pattern.AbstractFactoryPattern{
+namespace SampleDesignPattern.AbstractFactoryPattern{
 
 class Wolf : Carnivore
   {

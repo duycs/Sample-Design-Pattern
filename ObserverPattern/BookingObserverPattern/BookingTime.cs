@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-namespace Sample_Design_Pattern.ObserverPattern.BookingObserverPattern
+namespace SampleDesignPattern.ObserverPattern.BookingObserverPattern
 {
     //abstract Subject
     abstract class BookingTime
